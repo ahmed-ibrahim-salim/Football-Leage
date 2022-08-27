@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF3959E728BA16EB002BCE24 /* PlayerDataHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3959E628BA16EB002BCE24 /* PlayerDataHelperTests.swift */; };
+		EF3959EA28BA2DDB002BCE24 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3959E928BA2DDB002BCE24 /* Player.swift */; };
+		EF3959ED28BA2E15002BCE24 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3959EC28BA2E15002BCE24 /* PlayerTests.swift */; };
+		EF3959EF28BA30A9002BCE24 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3959EE28BA30A9002BCE24 /* Team.swift */; };
+		EF3959F128BA3218002BCE24 /* TeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3959F028BA3218002BCE24 /* TeamTests.swift */; };
+		EF3959F428BA3287002BCE24 /* TeamBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3959F328BA3287002BCE24 /* TeamBridge.swift */; };
+		EF3959F728BA32A7002BCE24 /* TeamBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3959F628BA32A7002BCE24 /* TeamBridgeTests.swift */; };
+		EF5988EF28B90BBC00BD0470 /* DataHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988EE28B90BBC00BD0470 /* DataHelperProtocol.swift */; };
+		EF5988F128B90C6500BD0470 /* TeamDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988F028B90C6500BD0470 /* TeamDataHelper.swift */; };
+		EF5988F328B90C9500BD0470 /* TeamDataHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988F228B90C9500BD0470 /* TeamDataHelperTests.swift */; };
+		EF5988F628B90E8E00BD0470 /* TeamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988F528B90E8E00BD0470 /* TeamData.swift */; };
+		EF5988F828B9141D00BD0470 /* TeamDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988F728B9141D00BD0470 /* TeamDataTests.swift */; };
+		EF5988FB28B915A100BD0470 /* PlayerDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988FA28B915A100BD0470 /* PlayerDataTests.swift */; };
+		EF5988FE28B92F6800BD0470 /* PlayerDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988FD28B92F6800BD0470 /* PlayerDataHelper.swift */; };
 		EF7EEF3B28B8F0B400EBA4D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF3A28B8F0B400EBA4D8 /* AppDelegate.swift */; };
 		EF7EEF3D28B8F0B400EBA4D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF3C28B8F0B400EBA4D8 /* SceneDelegate.swift */; };
 		EF7EEF3F28B8F0B400EBA4D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF3E28B8F0B400EBA4D8 /* ViewController.swift */; };
 		EF7EEF4228B8F0B400EBA4D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7EEF4028B8F0B400EBA4D8 /* Main.storyboard */; };
 		EF7EEF4428B8F0B500EBA4D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7EEF4328B8F0B500EBA4D8 /* Assets.xcassets */; };
 		EF7EEF4728B8F0B500EBA4D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7EEF4528B8F0B500EBA4D8 /* LaunchScreen.storyboard */; };
-		EF7EEF5228B8F0B500EBA4D8 /* Football_LeageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF5128B8F0B500EBA4D8 /* Football_LeageTests.swift */; };
 		EF7EEF5C28B8F0B500EBA4D8 /* Football_LeageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF5B28B8F0B500EBA4D8 /* Football_LeageUITests.swift */; };
 		EF7EEF5E28B8F0B500EBA4D8 /* Football_LeageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF5D28B8F0B500EBA4D8 /* Football_LeageUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +49,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF3959E628BA16EB002BCE24 /* PlayerDataHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataHelperTests.swift; sourceTree = "<group>"; };
+		EF3959E928BA2DDB002BCE24 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		EF3959EC28BA2E15002BCE24 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		EF3959EE28BA30A9002BCE24 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		EF3959F028BA3218002BCE24 /* TeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTests.swift; sourceTree = "<group>"; };
+		EF3959F328BA3287002BCE24 /* TeamBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBridge.swift; sourceTree = "<group>"; };
+		EF3959F628BA32A7002BCE24 /* TeamBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBridgeTests.swift; sourceTree = "<group>"; };
+		EF5988EE28B90BBC00BD0470 /* DataHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelperProtocol.swift; sourceTree = "<group>"; };
+		EF5988F028B90C6500BD0470 /* TeamDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataHelper.swift; sourceTree = "<group>"; };
+		EF5988F228B90C9500BD0470 /* TeamDataHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataHelperTests.swift; sourceTree = "<group>"; };
+		EF5988F528B90E8E00BD0470 /* TeamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamData.swift; sourceTree = "<group>"; };
+		EF5988F728B9141D00BD0470 /* TeamDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataTests.swift; sourceTree = "<group>"; };
+		EF5988FA28B915A100BD0470 /* PlayerDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataTests.swift; sourceTree = "<group>"; };
+		EF5988FD28B92F6800BD0470 /* PlayerDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataHelper.swift; sourceTree = "<group>"; };
 		EF7EEF3728B8F0B400EBA4D8 /* Football Leage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Football Leage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7EEF3A28B8F0B400EBA4D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF7EEF3C28B8F0B400EBA4D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +72,6 @@
 		EF7EEF4628B8F0B500EBA4D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF7EEF4828B8F0B500EBA4D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF7EEF4D28B8F0B500EBA4D8 /* Football LeageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Football LeageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF7EEF5128B8F0B500EBA4D8 /* Football_LeageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football_LeageTests.swift; sourceTree = "<group>"; };
 		EF7EEF5728B8F0B500EBA4D8 /* Football LeageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Football LeageUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7EEF5B28B8F0B500EBA4D8 /* Football_LeageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football_LeageUITests.swift; sourceTree = "<group>"; };
 		EF7EEF5D28B8F0B500EBA4D8 /* Football_LeageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football_LeageUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -76,6 +102,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF3959E828BA2D9E002BCE24 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				EF3959E928BA2DDB002BCE24 /* Player.swift */,
+				EF3959EE28BA30A9002BCE24 /* Team.swift */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		EF3959EB28BA2DEE002BCE24 /* ApplicationLayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF3959EC28BA2E15002BCE24 /* PlayerTests.swift */,
+				EF3959F028BA3218002BCE24 /* TeamTests.swift */,
+			);
+			path = ApplicationLayerTests;
+			sourceTree = "<group>";
+		};
+		EF3959F228BA3278002BCE24 /* BridgeLayer */ = {
+			isa = PBXGroup;
+			children = (
+				EF3959F328BA3287002BCE24 /* TeamBridge.swift */,
+			);
+			path = BridgeLayer;
+			sourceTree = "<group>";
+		};
+		EF3959F528BA3290002BCE24 /* BridgeLayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF3959F628BA32A7002BCE24 /* TeamBridgeTests.swift */,
+			);
+			path = BridgeLayerTests;
+			sourceTree = "<group>";
+		};
+		EF5988ED28B90BA500BD0470 /* DataHelperLayer */ = {
+			isa = PBXGroup;
+			children = (
+				EF5988EE28B90BBC00BD0470 /* DataHelperProtocol.swift */,
+				EF5988F028B90C6500BD0470 /* TeamDataHelper.swift */,
+				EF5988FD28B92F6800BD0470 /* PlayerDataHelper.swift */,
+			);
+			path = DataHelperLayer;
+			sourceTree = "<group>";
+		};
+		EF5988F428B90E7600BD0470 /* DataModelLayer */ = {
+			isa = PBXGroup;
+			children = (
+				EF5988F528B90E8E00BD0470 /* TeamData.swift */,
+			);
+			path = DataModelLayer;
+			sourceTree = "<group>";
+		};
+		EF5988F928B9157F00BD0470 /* DataModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF5988F728B9141D00BD0470 /* TeamDataTests.swift */,
+				EF5988FA28B915A100BD0470 /* PlayerDataTests.swift */,
+			);
+			path = DataModelTests;
+			sourceTree = "<group>";
+		};
+		EF5988FC28B91AE300BD0470 /* DataHelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF5988F228B90C9500BD0470 /* TeamDataHelperTests.swift */,
+				EF3959E628BA16EB002BCE24 /* PlayerDataHelperTests.swift */,
+			);
+			path = DataHelperTests;
+			sourceTree = "<group>";
+		};
 		EF7EEF2E28B8F0B300EBA4D8 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +195,10 @@
 		EF7EEF3928B8F0B400EBA4D8 /* Football Leage */ = {
 			isa = PBXGroup;
 			children = (
+				EF3959F228BA3278002BCE24 /* BridgeLayer */,
+				EF3959E828BA2D9E002BCE24 /* ApplicationLayer */,
+				EF5988F428B90E7600BD0470 /* DataModelLayer */,
+				EF5988ED28B90BA500BD0470 /* DataHelperLayer */,
 				EF7EEF3A28B8F0B400EBA4D8 /* AppDelegate.swift */,
 				EF7EEF3C28B8F0B400EBA4D8 /* SceneDelegate.swift */,
 				EF7EEF3E28B8F0B400EBA4D8 /* ViewController.swift */,
@@ -113,7 +213,10 @@
 		EF7EEF5028B8F0B500EBA4D8 /* Football LeageTests */ = {
 			isa = PBXGroup;
 			children = (
-				EF7EEF5128B8F0B500EBA4D8 /* Football_LeageTests.swift */,
+				EF3959F528BA3290002BCE24 /* BridgeLayerTests */,
+				EF3959EB28BA2DEE002BCE24 /* ApplicationLayerTests */,
+				EF5988FC28B91AE300BD0470 /* DataHelperTests */,
+				EF5988F928B9157F00BD0470 /* DataModelTests */,
 			);
 			path = "Football LeageTests";
 			sourceTree = "<group>";
@@ -198,6 +301,7 @@
 					};
 					EF7EEF4C28B8F0B500EBA4D8 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = EF7EEF3628B8F0B400EBA4D8;
 					};
 					EF7EEF5628B8F0B500EBA4D8 = {
@@ -258,8 +362,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3959EF28BA30A9002BCE24 /* Team.swift in Sources */,
+				EF5988F128B90C6500BD0470 /* TeamDataHelper.swift in Sources */,
 				EF7EEF3F28B8F0B400EBA4D8 /* ViewController.swift in Sources */,
+				EF5988EF28B90BBC00BD0470 /* DataHelperProtocol.swift in Sources */,
+				EF5988FE28B92F6800BD0470 /* PlayerDataHelper.swift in Sources */,
+				EF3959EA28BA2DDB002BCE24 /* Player.swift in Sources */,
 				EF7EEF3B28B8F0B400EBA4D8 /* AppDelegate.swift in Sources */,
+				EF3959F428BA3287002BCE24 /* TeamBridge.swift in Sources */,
+				EF5988F628B90E8E00BD0470 /* TeamData.swift in Sources */,
 				EF7EEF3D28B8F0B400EBA4D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +379,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF7EEF5228B8F0B500EBA4D8 /* Football_LeageTests.swift in Sources */,
+				EF3959ED28BA2E15002BCE24 /* PlayerTests.swift in Sources */,
+				EF5988FB28B915A100BD0470 /* PlayerDataTests.swift in Sources */,
+				EF5988F828B9141D00BD0470 /* TeamDataTests.swift in Sources */,
+				EF3959E728BA16EB002BCE24 /* PlayerDataHelperTests.swift in Sources */,
+				EF3959F728BA32A7002BCE24 /* TeamBridgeTests.swift in Sources */,
+				EF3959F128BA3218002BCE24 /* TeamTests.swift in Sources */,
+				EF5988F328B90C9500BD0470 /* TeamDataHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,15 +610,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AJ7MW2XDAX;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "justme.Football-LeageTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Football Leage.app/Football Leage";
@@ -513,11 +637,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AJ7MW2XDAX;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "justme.Football-LeageTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
