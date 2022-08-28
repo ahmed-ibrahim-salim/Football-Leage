@@ -33,18 +33,18 @@ class TeamDataHelperTests: XCTestCase {
             XCTAssertEqual(error as! DataAccessError, DataAccessError.insertError)
         }
     }
-    func test_Insert_InsertsTeam(){
-        let team1 = TeamData(nickName: "Barcelona", teamId: 1)
-        do{
-            _ = try sut.insert(item: team1)
-        }catch{}
-        
-        let team2 = TeamData(nickName: "RealMadrid", teamId: 1)
-
-        XCTAssertThrowsError(try sut.insert(item: team2)){ (error) in
-            XCTAssertEqual(error as! DataAccessError, DataAccessError.insertError )
-        }
-    }
+//    func test_Insert_InsertsTeam(){
+//        let team1 = TeamData(nickName: "Barcelona", teamId: 1)
+//        do{
+//            _ = try sut.insert(item: team1)
+//        }catch{}
+//        
+//        let team2 = TeamData(nickName: "RealMadrid", teamId: 1)
+//
+//        XCTAssertThrowsError(try sut.insert(item: team2)){ (error) in
+//            XCTAssertEqual(error as! DataAccessError, DataAccessError.insertError )
+//        }
+//    }
     
     func test_GetTeam_WhenTeamIsNotInTeams_ThrowsError(){
         let team1 = TeamData(nickName: "Barcelona", teamId: 1)

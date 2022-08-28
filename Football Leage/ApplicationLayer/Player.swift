@@ -10,13 +10,13 @@ import Foundation
 struct Player{
     var firstName: String
     var lastName: String
-    var playerId: Int
+    var playerId: Int?
     var teamId: Int?
     var number: Int?
     var position: Positions?
     var team: Team?
     
-    init(firstName: String,lastName: String,playerId: Int, teamId: Int? = nil,number: Int? = nil,position: Positions? = nil,team: Team? = nil) {
+    init(firstName: String,lastName: String,playerId: Int? = nil, teamId: Int? = nil,number: Int? = nil,position: Positions? = nil,team: Team? = nil) {
         
         self.firstName = firstName
         self.lastName = lastName

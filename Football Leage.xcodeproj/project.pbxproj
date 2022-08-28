@@ -14,6 +14,9 @@
 		EF3959F128BA3218002BCE24 /* TeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3959F028BA3218002BCE24 /* TeamTests.swift */; };
 		EF3959F428BA3287002BCE24 /* TeamBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3959F328BA3287002BCE24 /* TeamBridge.swift */; };
 		EF3959F728BA32A7002BCE24 /* TeamBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3959F628BA32A7002BCE24 /* TeamBridgeTests.swift */; };
+		EF5926AE28BB7126001B65F1 /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5926AD28BB7126001B65F1 /* PlayerData.swift */; };
+		EF5926B028BBB408001B65F1 /* PlayerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5926AF28BBB408001B65F1 /* PlayerBridge.swift */; };
+		EF5926B228BBB4C6001B65F1 /* PlayerBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5926B128BBB4C6001B65F1 /* PlayerBridgeTests.swift */; };
 		EF5988EF28B90BBC00BD0470 /* DataHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988EE28B90BBC00BD0470 /* DataHelperProtocol.swift */; };
 		EF5988F128B90C6500BD0470 /* TeamDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988F028B90C6500BD0470 /* TeamDataHelper.swift */; };
 		EF5988F328B90C9500BD0470 /* TeamDataHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988F228B90C9500BD0470 /* TeamDataHelperTests.swift */; };
@@ -56,6 +59,9 @@
 		EF3959F028BA3218002BCE24 /* TeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTests.swift; sourceTree = "<group>"; };
 		EF3959F328BA3287002BCE24 /* TeamBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBridge.swift; sourceTree = "<group>"; };
 		EF3959F628BA32A7002BCE24 /* TeamBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBridgeTests.swift; sourceTree = "<group>"; };
+		EF5926AD28BB7126001B65F1 /* PlayerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
+		EF5926AF28BBB408001B65F1 /* PlayerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBridge.swift; sourceTree = "<group>"; };
+		EF5926B128BBB4C6001B65F1 /* PlayerBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBridgeTests.swift; sourceTree = "<group>"; };
 		EF5988EE28B90BBC00BD0470 /* DataHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelperProtocol.swift; sourceTree = "<group>"; };
 		EF5988F028B90C6500BD0470 /* TeamDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataHelper.swift; sourceTree = "<group>"; };
 		EF5988F228B90C9500BD0470 /* TeamDataHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataHelperTests.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				EF3959F328BA3287002BCE24 /* TeamBridge.swift */,
+				EF5926AF28BBB408001B65F1 /* PlayerBridge.swift */,
 			);
 			path = BridgeLayer;
 			sourceTree = "<group>";
@@ -132,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				EF3959F628BA32A7002BCE24 /* TeamBridgeTests.swift */,
+				EF5926B128BBB4C6001B65F1 /* PlayerBridgeTests.swift */,
 			);
 			path = BridgeLayerTests;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				EF5988F528B90E8E00BD0470 /* TeamData.swift */,
+				EF5926AD28BB7126001B65F1 /* PlayerData.swift */,
 			);
 			path = DataModelLayer;
 			sourceTree = "<group>";
@@ -369,6 +378,8 @@
 				EF5988FE28B92F6800BD0470 /* PlayerDataHelper.swift in Sources */,
 				EF3959EA28BA2DDB002BCE24 /* Player.swift in Sources */,
 				EF7EEF3B28B8F0B400EBA4D8 /* AppDelegate.swift in Sources */,
+				EF5926B028BBB408001B65F1 /* PlayerBridge.swift in Sources */,
+				EF5926AE28BB7126001B65F1 /* PlayerData.swift in Sources */,
 				EF3959F428BA3287002BCE24 /* TeamBridge.swift in Sources */,
 				EF5988F628B90E8E00BD0470 /* TeamData.swift in Sources */,
 				EF7EEF3D28B8F0B400EBA4D8 /* SceneDelegate.swift in Sources */,
@@ -386,6 +397,7 @@
 				EF3959F728BA32A7002BCE24 /* TeamBridgeTests.swift in Sources */,
 				EF3959F128BA3218002BCE24 /* TeamTests.swift in Sources */,
 				EF5988F328B90C9500BD0470 /* TeamDataHelperTests.swift in Sources */,
+				EF5926B228BBB4C6001B65F1 /* PlayerBridgeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

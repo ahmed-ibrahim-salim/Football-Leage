@@ -8,11 +8,11 @@
 import Foundation
 
 struct Team {
-    var teamId: Int
-    var nickName: String?
+    var teamId: Int64?
+    var nickName: String
     var city: String?
     
-    init(teamId: Int,nickName: String,city: String? = nil) {
+    init(teamId: Int64? = nil,nickName: String,city: String? = nil) {
         self.teamId = teamId
         self.nickName = nickName
         self.city = city

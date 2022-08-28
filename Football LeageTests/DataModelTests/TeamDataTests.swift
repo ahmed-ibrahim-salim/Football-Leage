@@ -29,13 +29,6 @@ class TeamDataTests: XCTestCase {
         
         XCTAssertEqual(team.nickName, "Man United")
     }
-    func test_2TeamsHaveSameId_IsEqual(){
-        let team1 = TeamData(nickName: "bla", teamId: 2)
-        
-        let team2 = TeamData(nickName: "none", teamId: 2)
-
-        XCTAssertEqual(team1, team2)
-    }
     func test_2PlayersHaveFirstAndLastName_IsEqual(){
         let team1 = TeamData(nickName: "Liverpool", teamId: 2)
         
