@@ -12,7 +12,7 @@ protocol DataHelper{
     
     func insert(item: T) throws -> Int
     func delete(item: T) throws -> T
-    func findAll() throws -> [T]
+    func findAll() -> [T]?
     
 }
 

@@ -36,9 +36,9 @@ class TeamDataHelper: DataHelper{
         throw DataAccessError.deleteError
     }
     
-    func findAll() throws -> [T] {
+    func findAll() -> [T]? {
         if teams.count < 1{
-            throw DataAccessError.searchError
+            return nil
         }
         return teams
     }

@@ -14,8 +14,11 @@ class PlayerDataHelper: DataHelper{
     var players = [T]()
     var numOfPlayers: Int { return players.count }
     
-    func player(at index: Int) -> T?{
-        return players[index]
+    func player(player: T) throws -> T{
+        if players.contains(player){
+            return player
+        }
+        throw DataAccessError.searchError
     }
     
     func insert(item: T) throws -> Int{
@@ -35,7 +38,10 @@ class PlayerDataHelper: DataHelper{
         throw DataAccessError.deleteError
     }
     
-    func findAll() throws -> [T] {
+    func findAll() -> [T]? {
+        if players.count < 1{
+            return nil
+        }
         return players
     }
 }

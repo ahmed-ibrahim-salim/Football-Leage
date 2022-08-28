@@ -18,6 +18,21 @@ class TeamDataHelperTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    func test_Insert_WhenInsertSameTeamTwice_ThrowsError(){
+        let team1 = TeamData(nickName: "Barcelona", teamId: 1)
+
+        let team2 = TeamData(nickName: "Barcelona", teamId: 1)
+        
+        do{
+            let _ = try sut.insert(item: team1)
+        }catch{
+            
+        }
+        XCTAssertThrowsError(try sut.insert(item: team2)){
+            error in
+            XCTAssertEqual(error as! DataAccessError, DataAccessError.insertError)
+        }
+    }
     func test_Insert_InsertsTeam(){
         let team1 = TeamData(nickName: "Barcelona", teamId: 1)
         do{
@@ -31,6 +46,15 @@ class TeamDataHelperTests: XCTestCase {
         }
     }
     
+    func test_GetTeam_WhenTeamIsNotInTeams_ThrowsError(){
+        let team1 = TeamData(nickName: "Barcelona", teamId: 1)
+        
+        XCTAssertThrowsError(try sut.team(team: team1)){
+            error in
+            XCTAssertEqual(error as! DataAccessError, DataAccessError.searchError)
+        }
+    }
+    
     func test_GetTeam_ReturnsTeam(){
         let team1 = TeamData(nickName: "Barcelona", teamId: 1)
         let team2 = TeamData(nickName: "Real Madrid", teamId: 2)
@@ -39,10 +63,10 @@ class TeamDataHelperTests: XCTestCase {
             let _ = try sut.insert(item: team1)
             let index2 = try sut.insert(item: team2)
             
-            let returnedTeam = sut.team(at: index2)
+            let returnedTeam = try sut.team(team: team2)
             XCTAssertEqual(sut.teams[index2],returnedTeam )
         }catch(let error){
-            XCTAssertEqual(error as! DataAccessError, DataAccessError.insertError)
+            XCTAssertEqual(error as! DataAccessError, DataAccessError.searchError)
         }
     }
     func test_Delete_WhenTeamIsNotInTeams_ThrowsError(){
@@ -77,11 +101,10 @@ class TeamDataHelperTests: XCTestCase {
             
         }
     }
-    func test_FindAll_WhenNoTeams_throwsError(){
-        XCTAssertThrowsError(try sut.findAll()){
-            error in
-            XCTAssertEqual(error as! DataAccessError, DataAccessError.searchError)
-        }
+    func test_FindAll_WhenNoTeams_ReturnsNil(){
+        let teams = sut.findAll()
+        XCTAssertNil(teams)
+            
     }
     func test_FindAll_ReturnsAllTeams(){
         let team1 = TeamData(nickName: "Barcelona", teamId: 1)
@@ -89,10 +112,12 @@ class TeamDataHelperTests: XCTestCase {
         do{
             let _ = try sut.insert(item: team1)
             let _ = try sut.insert(item: team2)
-            let teams = try sut.findAll()
-            XCTAssertEqual(teams, sut.teams)
-        }catch(let error){
-            XCTAssertEqual(error as! DataAccessError, DataAccessError.searchError)
+            guard let teams = sut.findAll()else{fatalError()}
+
+            XCTAssertEqual(team1, teams[0])
+            XCTAssertEqual(team2, teams[1])
+        }catch{
+            
         }
     }
 }
