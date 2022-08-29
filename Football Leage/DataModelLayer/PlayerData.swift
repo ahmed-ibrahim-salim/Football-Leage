@@ -2,7 +2,7 @@
 //  PlayerData.swift
 //  Football Leage
 //
-//  Created by magdy khalifa on 28/08/2022.
+//  Created by Ahmad ibrahim on 28/08/2022.
 //
 
 import Foundation

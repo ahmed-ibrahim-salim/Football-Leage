@@ -2,7 +2,7 @@
 //  PlayerBridgeTests.swift
 //  Football LeageTests
 //
-//  Created by magdy khalifa on 28/08/2022.
+//  Created by Ahmad ibrahim on 28/08/2022.
 //
 
 import XCTest
@@ -55,16 +55,63 @@ class PlayerBridgeTests: XCTestCase {
             XCTAssertTrue(false)
         }
     }
+    func test_Delete_DeleteNonExistedPlayer_ThrowsError(){
+        let player = Player(firstName: "loka", lastName: "Modrich")
+        
+        XCTAssertThrowsError(try sut.delete(player: player))
+    }
+    func test_Delete_DeletesPlayer(){
+        var player1 = Player(firstName: "Loca", lastName: "Modrich")
+        var player2 = Player(firstName: "ronaldinho", lastName: "Ronaldo")
+        
+        do{
+            let _ = try sut.save(player: &player1)
+            let _ = try sut.save(player: &player2)
+
+            try sut.delete(player: player2)
+            XCTAssertTrue(stubPlayerDataHelper.calledDelete)
+            
+        }catch{
+            XCTAssertTrue(false)
+        }
+    }
+    func test_Retrieve_RetrieveNonExistedPlayer_ThrowsError(){
+        let player = Player(firstName: "Luca", lastName: "Modrich")
+        
+        XCTAssertThrowsError(try sut.retrieve(player: player))
+    }
+    func test_Retrive_RetrievesPlayer(){
+        var player = Player(firstName: "Luca", lastName: "Modrich")
+
+        do{
+            try sut.save(player: &player)
+            let _ = try sut.retrieve(player: player)
+            
+            XCTAssertTrue(stubPlayerDataHelper.calledPlayer)
+        }catch{
+            XCTAssertTrue(false)
+        }
+    }
 }
 
 extension PlayerBridgeTests{
     class StubPlayerDataHelper: PlayerDataHelper{
         
         var calledInsert: Bool = false
+        var calledDelete: Bool = false
+        var calledPlayer: Bool = false
         
         override func insert(item: PlayerDataHelper.T) throws -> Int {
             calledInsert = true
             return try super.insert(item: item)
+        }
+        override func delete(item: PlayerDataHelper.T) throws -> PlayerDataHelper.T {
+            calledDelete = true
+            return try super.delete(item: item)
+        }
+        override func player(player: PlayerDataHelper.T) throws -> PlayerDataHelper.T {
+            self.calledPlayer = true
+            return try super.player(player: player)
         }
     }
     

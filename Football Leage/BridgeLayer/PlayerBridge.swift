@@ -2,7 +2,7 @@
 //  PlayerBridge.swift
 //  Football Leage
 //
-//  Created by magdy khalifa on 28/08/2022.
+//  Created by Ahmad ibrahim on 28/08/2022.
 //
 
 import Foundation
@@ -27,5 +27,14 @@ struct PlayerBridge{
         playerData.teamId = Int64(id)
         let _ = self.toPlayer(playerData: playerData)
         
+    }
+    func delete(player: Player) throws{
+        let playerData = self.toPlayerData(player: player)
+        let _ = try self.playerDataHelper.delete(item: playerData)
+    }
+    func retrieve(player: Player) throws -> Player{
+        let playerData = self.toPlayerData(player: player)
+        let retrievedPlayer = try self.playerDataHelper.player(player: playerData)
+        return self.toPlayer(playerData: retrievedPlayer)
     }
 }
