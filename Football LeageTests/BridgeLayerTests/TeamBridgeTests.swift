@@ -88,6 +88,18 @@ class TeamBridgeTests: XCTestCase {
             XCTAssertTrue(false)
         }
     }
+    func test_retrieveAllTeams_ReturnsAllTeams(){
+        var team1 = Team(nickName: "Man United")
+        var team2 = Team(nickName: "LiverPool")
+
+        do{
+            _ = try sut.save(team: &team1)
+            _ = try sut.save(team: &team2)
+            XCTAssertEqual(sut.teamsCount, 2)
+        }catch{
+            XCTAssertTrue(false)
+        }
+    }
 }
 
 extension TeamBridgeTests{

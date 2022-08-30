@@ -12,7 +12,7 @@ struct TeamData: Equatable{
     var nickName: String
     var city: String?
     
-    init(nickName: String,teamId: Int64? = nil,city: String? = nil){
+    init(nickName: String, teamId: Int64? = nil,city: String? = nil){
         self.nickName = nickName
         self.teamId = teamId
         self.city = city

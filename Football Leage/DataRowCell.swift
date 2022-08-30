@@ -2,7 +2,7 @@
 //  DataRowCell.swift
 //  Football Leage
 //
-//  Created by magdy khalifa on 29/08/2022.
+//  Created by Ahmed ibrahim on 29/08/2022.
 //
 
 import UIKit

@@ -1,5 +1,5 @@
 1- project_main_target --> build Phases --> new run script 
-2- then add this shel script 
+2- then add this shell script 
 
 if [ "${CONFIGURATION}" = "Debug" ]; then
 if which swiftlint >/dev/null; then
@@ -10,10 +10,15 @@ fi
 fi
 
 3- touch .swiftlint.yml
-4- vim .swiftlint
+4- vim .swiftlint.yml
 5- add 
+
 disabled_rules:
  - opening_brace
  - trailing_whitespace
  - statement_position 
+excluded:
+ # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
 

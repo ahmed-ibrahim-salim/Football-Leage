@@ -33,7 +33,7 @@
 		EF7EEF5C28B8F0B500EBA4D8 /* Football_LeageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF5B28B8F0B500EBA4D8 /* Football_LeageUITests.swift */; };
 		EF7EEF5E28B8F0B500EBA4D8 /* Football_LeageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF5D28B8F0B500EBA4D8 /* Football_LeageUITestsLaunchTests.swift */; };
 		EFA5F9A328BCCBCD0099162E /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5F9A228BCCBCD0099162E /* MainViewControllerTests.swift */; };
-		EFA5F9A728BD039D0099162E /* MainControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5F9A628BD039D0099162E /* MainControllerDataSource.swift */; };
+		EFA5F9A728BD039D0099162E /* MainDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5F9A628BD039D0099162E /* MainDataProvider.swift */; };
 		EFA5F9AA28BD0BF80099162E /* DataRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5F9A828BD0BF80099162E /* DataRowCell.swift */; };
 		EFA5F9AB28BD0BF80099162E /* DataRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA5F9A928BD0BF80099162E /* DataRowCell.xib */; };
 		EFA5F9AF28BD18050099162E /* MainDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5F9AE28BD18050099162E /* MainDataProviderTests.swift */; };
@@ -87,7 +87,7 @@
 		EF7EEF5B28B8F0B500EBA4D8 /* Football_LeageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football_LeageUITests.swift; sourceTree = "<group>"; };
 		EF7EEF5D28B8F0B500EBA4D8 /* Football_LeageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football_LeageUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EFA5F9A228BCCBCD0099162E /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
-		EFA5F9A628BD039D0099162E /* MainControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerDataSource.swift; sourceTree = "<group>"; };
+		EFA5F9A628BD039D0099162E /* MainDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataProvider.swift; sourceTree = "<group>"; };
 		EFA5F9A828BD0BF80099162E /* DataRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRowCell.swift; sourceTree = "<group>"; };
 		EFA5F9A928BD0BF80099162E /* DataRowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataRowCell.xib; sourceTree = "<group>"; };
 		EFA5F9AE28BD18050099162E /* MainDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataProviderTests.swift; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 				EF5988ED28B90BA500BD0470 /* DataHelperLayer */,
 				EF7EEF3A28B8F0B400EBA4D8 /* AppDelegate.swift */,
 				EF7EEF3C28B8F0B400EBA4D8 /* SceneDelegate.swift */,
-				EFA5F9A628BD039D0099162E /* MainControllerDataSource.swift */,
+				EFA5F9A628BD039D0099162E /* MainDataProvider.swift */,
 				EF7EEF3E28B8F0B400EBA4D8 /* MainViewController.swift */,
 				EF7EEF4028B8F0B400EBA4D8 /* Main.storyboard */,
 				EF7EEF4328B8F0B500EBA4D8 /* Assets.xcassets */,
@@ -417,7 +417,7 @@
 				EF3959EA28BA2DDB002BCE24 /* Player.swift in Sources */,
 				EF7EEF3B28B8F0B400EBA4D8 /* AppDelegate.swift in Sources */,
 				EF5926B028BBB408001B65F1 /* PlayerBridge.swift in Sources */,
-				EFA5F9A728BD039D0099162E /* MainControllerDataSource.swift in Sources */,
+				EFA5F9A728BD039D0099162E /* MainDataProvider.swift in Sources */,
 				EF5926AE28BB7126001B65F1 /* PlayerData.swift in Sources */,
 				EF3959F428BA3287002BCE24 /* TeamBridge.swift in Sources */,
 				EF5988F628B90E8E00BD0470 /* TeamData.swift in Sources */,

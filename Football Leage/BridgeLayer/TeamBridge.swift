@@ -9,7 +9,8 @@ import Foundation
 
 struct TeamBridge{
     var teamDataHelper: TeamDataHelper!
-    
+    var teamsCount: Int { return retrieveAll() }
+
     init(teamDataHelper: TeamDataHelper){
         self.teamDataHelper = teamDataHelper
     }
@@ -31,11 +32,17 @@ struct TeamBridge{
     }
     func delete(team: Team) throws {
         let teamData =  self.toTeamData(team: team)
-         _ = try teamDataHelper.delete(item: teamData)
+        _ = try teamDataHelper.delete(item: teamData)
     }
     func retrieve(team: Team) throws -> Team{
         let teamData = self.toTeamData(team: team)
         let team = try teamDataHelper.team(team: teamData)
         return self.toTeam(teamData: team)
+    }
+    func retrieveAll() -> Int{
+        if let teamData = teamDataHelper.findAll(){
+            return teamData.count
+        }
+        return 0
     }
 }

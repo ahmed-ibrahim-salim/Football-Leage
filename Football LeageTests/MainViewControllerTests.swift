@@ -15,7 +15,7 @@ class MainViewControllerTests: XCTestCase {
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        sut = storyboard.instantiateViewController(identifier: "MainViewController")
+        sut = storyboard.instantiateViewController(identifier: "MainViewController") as? MainViewController
         
         sut.loadViewIfNeeded()
         
