@@ -15,7 +15,7 @@ struct TeamBridge{
     }
     
     func toTeamData(team: Team) -> TeamData{
-        return TeamData(nickName: team.nickName, teamId: team.teamId,city: team.city)
+        return TeamData(nickName: team.nickName, teamId: team.teamId, city: team.city)
     }
     func toTeam(teamData: TeamData) -> Team{
         return Team(teamId: teamData.teamId, nickName: teamData.nickName, city: teamData.city)
@@ -31,7 +31,7 @@ struct TeamBridge{
     }
     func delete(team: Team) throws {
         let teamData =  self.toTeamData(team: team)
-        let _ = try teamDataHelper.delete(item: teamData)
+         _ = try teamDataHelper.delete(item: teamData)
     }
     func retrieve(team: Team) throws -> Team{
         let teamData = self.toTeamData(team: team)

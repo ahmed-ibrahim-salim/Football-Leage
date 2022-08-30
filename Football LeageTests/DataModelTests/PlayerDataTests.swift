@@ -29,7 +29,7 @@ class PlayerDataTests: XCTestCase {
         XCTAssertEqual(player.firstName, "Gerrad")
         XCTAssertEqual(player.lastName, "Pique")
     }
-    func test_2PlayersHaveFirstAndLastName_IsEqual(){
+    func test_2PlayersHaveFirstAndLastName_IsEqual(){ 
         let player1 = PlayerData(playerId: 1, firstName: "Gerrard", lastName: "Pique", number: 22)
         
         let player2 = PlayerData(playerId: 2, firstName: "Gerrard", lastName: "Pique", number: 22)

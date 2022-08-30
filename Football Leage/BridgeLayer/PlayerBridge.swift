@@ -8,10 +8,9 @@
 import Foundation
 
 struct PlayerBridge{
-    
     var playerDataHelper: PlayerDataHelper!
     
-    init(playerDataHelper: PlayerDataHelper){
+    init(playerDataHelper: PlayerDataHelper) {
         self.playerDataHelper = playerDataHelper
     }
     
@@ -25,12 +24,12 @@ struct PlayerBridge{
         var playerData = self.toPlayerData(player: player)
         let id = try playerDataHelper.insert(item: playerData)
         playerData.teamId = Int64(id)
-        let _ = self.toPlayer(playerData: playerData)
+         _ = self.toPlayer(playerData: playerData)
         
     }
     func delete(player: Player) throws{
         let playerData = self.toPlayerData(player: player)
-        let _ = try self.playerDataHelper.delete(item: playerData)
+         _ = try self.playerDataHelper.delete(item: playerData)
     }
     func retrieve(player: Player) throws -> Player{
         let playerData = self.toPlayerData(player: player)

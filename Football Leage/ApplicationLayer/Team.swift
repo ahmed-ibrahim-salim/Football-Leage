@@ -12,7 +12,7 @@ struct Team {
     var nickName: String
     var city: String?
     
-    init(teamId: Int64? = nil,nickName: String,city: String? = nil) {
+    init(teamId: Int64? = nil, nickName: String, city: String? = nil) {
         self.teamId = teamId
         self.nickName = nickName
         self.city = city

@@ -18,7 +18,7 @@ class TeamDataTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func test_GivenTeamID_EqualTeamId(){
+    func test_GivenTeamID_EqualTeamId(){ 
         let team = TeamData(nickName: "Man", teamId: 1)
         
         XCTAssertEqual(team.teamId, 1)

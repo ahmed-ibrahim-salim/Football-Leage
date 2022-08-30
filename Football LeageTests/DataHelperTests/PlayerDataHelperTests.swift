@@ -27,34 +27,32 @@ class PlayerDataHelperTests: XCTestCase {
     func test_GetPlayer_ReturnsPlayer(){
         let player1 = PlayerData(playerId: 1, firstName: "micheal", lastName: "jorden")
         do{
-            let _ = try sut.insert(item: player1)
+             _ = try sut.insert(item: player1)
             let returnedPlayer = try sut.player(player: player1)
             XCTAssertEqual(player1, returnedPlayer)
-        }catch(let error){
-            XCTAssertEqual(error as! DataAccessError, DataAccessError.searchError)
+        } catch let error {
+            XCTAssertEqual(error as? DataAccessError, DataAccessError.searchError)
         }
     }
-    
     func test_Insert_WhenInsertSamePlayerTwice_ThrowsError(){
         let player1 = PlayerData(playerId: 1, firstName: "micheal", lastName: "roman")
         let player2 = PlayerData(playerId: 1, firstName: "micheal", lastName: "roman")
         do{
-            let _ = try sut.insert(item: player1)
-            let _ = try sut.insert(item: player2)
-            
-        }catch(let error){
-            XCTAssertEqual(error as! DataAccessError, DataAccessError.insertError)
+             _ = try sut.insert(item: player1)
+             _ = try sut.insert(item: player2)
+        } catch let error {
+            XCTAssertEqual(error as? DataAccessError, DataAccessError.insertError)
         }
     }
     func test_Insert_InsertsPlayer(){
         let player1 = PlayerData(playerId: 1, firstName: "micheal", lastName: "roman")
         let player2 = PlayerData(playerId: 2, firstName: "micheal", lastName: "jorden")
-        do{
-            let _ = try sut.insert(item: player1)
+        do {
+            _ = try sut.insert(item: player1)
             let index = try sut.insert(item: player2)
             XCTAssertEqual(sut.players[index], player2)
-        }catch(let error){
-            XCTAssertEqual(error as! DataAccessError, DataAccessError.insertError)
+        } catch let error {
+            XCTAssertEqual(error as? DataAccessError, DataAccessError.insertError)
         }
     }
     func test_Delete_WhenPlayerNotInPlayers_ThrowsError(){
@@ -65,45 +63,42 @@ class PlayerDataHelperTests: XCTestCase {
     func test_Delete_DeletesPlayer(){
         let player1 = PlayerData(playerId: 1, firstName: "micheal", lastName: "roman")
         let player2 = PlayerData(playerId: 2, firstName: "micheal", lastName: "jorden")
-        do{
-            let _ = try sut.insert(item: player1)
-            let _ = try sut.insert(item: player2)
+        do {
+             _ = try sut.insert(item: player1)
+             _ = try sut.insert(item: player2)
             let deletedTeam = try sut.delete(item: player2)
 
             XCTAssertEqual(player2, deletedTeam)
-        }catch(let error){
-            XCTAssertEqual(error as! DataAccessError, DataAccessError.deleteError)
+        } catch let error {
+            XCTAssertEqual(error as? DataAccessError, DataAccessError.deleteError)
         }
     }
-    func test_NumOfPlayers_CountOfPlayers(){
+    func test_NumOfPlayers_CountOfPlayers() {
         let player1 = PlayerData(playerId: 1, firstName: "micheal", lastName: "roman")
         let player2 = PlayerData(playerId: 2, firstName: "micheal", lastName: "jorden")
-        do{
-            let _ = try sut.insert(item: player1)
-            let _ = try sut.insert(item: player2)
-            
+        do {
+             _ = try sut.insert(item: player1)
+             _ = try sut.insert(item: player2)
             XCTAssertEqual(sut.numOfPlayers, 2)
-        }catch{
-            
+        } catch {
         }
     }
     func test_FindAll_WhenNoPlayers_ReturnsNil(){
         let teams = sut.findAll()
         XCTAssertNil(teams)
     }
-    func test_FindAll_ReturnsAllPlayers(){
+    func test_FindAll_ReturnsAllPlayers() {
         let player1 = PlayerData(playerId: 1, firstName: "micheal", lastName: "roman")
         let player2 = PlayerData(playerId: 2, firstName: "micheal", lastName: "jorden")
         do{
-            let _ = try sut.insert(item: player1)
-            let _ = try sut.insert(item: player2)
+             _ = try sut.insert(item: player1)
+             _ = try sut.insert(item: player2)
 
             guard let players = sut.findAll()else{fatalError()}
 
             XCTAssertEqual(player1, players[0])
             XCTAssertEqual(player2, players[1])
-        }catch{
-            
+        } catch {
         }
     }
 }

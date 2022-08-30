@@ -16,7 +16,8 @@ struct Player{
     var position: Positions?
     var team: Team?
     
-    init(firstName: String,lastName: String,playerId: Int? = nil, teamId: Int? = nil,number: Int? = nil,position: Positions? = nil,team: Team? = nil) {
+    init(firstName: String, lastName: String, playerId: Int? = nil,
+         teamId: Int? = nil, number: Int? = nil, position: Positions? = nil, team: Team? = nil) {
         
         self.firstName = firstName
         self.lastName = lastName

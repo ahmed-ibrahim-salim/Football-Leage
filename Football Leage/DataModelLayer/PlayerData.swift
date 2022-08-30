@@ -15,7 +15,8 @@ struct PlayerData: Equatable{
     var teamId: Int64?
     var position: Positions?
     
-    init(playerId: Int64? = nil,firstName: String,lastName: String, number:Int? = nil,teamId: Int64? = nil, position: Positions? = nil) {
+    init(playerId: Int64? = nil, firstName: String, lastName: String, number: Int? = nil,
+         teamId: Int64? = nil, position: Positions? = nil) {
         self.teamId = teamId
         self.firstName = firstName
         self.lastName = lastName

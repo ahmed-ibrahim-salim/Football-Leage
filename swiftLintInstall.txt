@@ -1,0 +1,19 @@
+1- project_main_target --> build Phases --> new run script 
+2- then add this shel script 
+
+if [ "${CONFIGURATION}" = "Debug" ]; then
+if which swiftlint >/dev/null; then
+swiftlint --config "$SRCROOT/.swiftlint.yml"
+else
+echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+fi
+fi
+
+3- touch .swiftlint.yml
+4- vim .swiftlint
+5- add 
+disabled_rules:
+ - opening_brace
+ - trailing_whitespace
+ - statement_position 
+

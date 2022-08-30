@@ -18,13 +18,9 @@ class PlayerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     func test_NewPlayer_CreatesNewPlayer(){
-        let player = Player(firstName:"Ramond",lastName: "gel")
+        let player = Player(firstName: "Ramond", lastName: "gel")
         
         XCTAssertEqual(player.firstName, "Ramond")
         
     }
-    
-
-   
-
 }

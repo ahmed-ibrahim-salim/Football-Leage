@@ -12,10 +12,10 @@ class MainViewControllerTests: XCTestCase {
     var sut: MainViewController!
     
     override func setUpWithError() throws {
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        
-        sut = sb.instantiateViewController(identifier: "MainViewController")
+        sut = storyboard.instantiateViewController(identifier: "MainViewController")
         
         sut.loadViewIfNeeded()
         

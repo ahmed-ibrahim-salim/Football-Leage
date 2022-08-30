@@ -27,7 +27,7 @@ class PlayerBridgeTests: XCTestCase {
         
         XCTAssertEqual(player.firstName, playerData.firstName)
     }
-    func test_ToPlayer_ReturnsPlayer(){
+    func test_ToPlayer_ReturnsPlayer() {
         let playerData = PlayerData(firstName: "Toni", lastName: "Kroos")
         
         let player = sut.toPlayer(playerData: playerData)
@@ -39,7 +39,7 @@ class PlayerBridgeTests: XCTestCase {
         var player2 = Player(firstName: "Toni", lastName: "Kroos")
         
         do{
-            let _ = try sut.save(player: &player1)
+             _ = try sut.save(player: &player1)
         }catch{
             XCTAssertTrue(false)
         }
@@ -49,9 +49,9 @@ class PlayerBridgeTests: XCTestCase {
     func test_Save_CallsInsertAt(){
         var player1 = Player(firstName: "Toni", lastName: "Kroos")
         do{
-            let _ = try sut.save(player: &player1)
+             _ = try sut.save(player: &player1)
             XCTAssertTrue(stubPlayerDataHelper.calledInsert)
-        }catch{
+        } catch{
             XCTAssertTrue(false)
         }
     }
@@ -65,13 +65,13 @@ class PlayerBridgeTests: XCTestCase {
         var player2 = Player(firstName: "ronaldinho", lastName: "Ronaldo")
         
         do{
-            let _ = try sut.save(player: &player1)
-            let _ = try sut.save(player: &player2)
+             _ = try sut.save(player: &player1)
+             _ = try sut.save(player: &player2)
 
             try sut.delete(player: player2)
             XCTAssertTrue(stubPlayerDataHelper.calledDelete)
             
-        }catch{
+        } catch{
             XCTAssertTrue(false)
         }
     }
@@ -85,10 +85,10 @@ class PlayerBridgeTests: XCTestCase {
 
         do{
             try sut.save(player: &player)
-            let _ = try sut.retrieve(player: player)
+             _ = try sut.retrieve(player: player)
             
             XCTAssertTrue(stubPlayerDataHelper.calledPlayer)
-        }catch{
+        } catch{
             XCTAssertTrue(false)
         }
     }

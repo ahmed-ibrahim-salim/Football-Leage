@@ -37,7 +37,7 @@ class TeamBridgeTests: XCTestCase {
     func test_Save_CallsInsert(){
         var team = Team(nickName: "Man United")
         do{
-            let _ = try sut.save(team: &team)
+             _ = try sut.save(team: &team)
             XCTAssertTrue(stupTeamDataHelper.calledInsert)
             
         }catch{
@@ -49,7 +49,7 @@ class TeamBridgeTests: XCTestCase {
         var team2 = Team(nickName: "Man United")
 
         do{
-            let _ = try sut.save(team: &team1)
+             _ = try sut.save(team: &team1)
         }catch{
             XCTAssertTrue(false)
         }
@@ -65,7 +65,7 @@ class TeamBridgeTests: XCTestCase {
         var team1 = Team(nickName: "Man United")
         
         do{
-            let _ = try sut.save(team: &team1)
+             _ = try sut.save(team: &team1)
             try sut.delete(team: team1)
             XCTAssertTrue(stupTeamDataHelper.calledDelete)
         }catch{
@@ -81,8 +81,8 @@ class TeamBridgeTests: XCTestCase {
         var team1 = Team(nickName: "Man United")
 
         do{
-            let _ = try sut.save(team: &team1)
-            let _ = try sut.retrieve(team: team1)
+             _ = try sut.save(team: &team1)
+             _ = try sut.retrieve(team: team1)
             XCTAssertTrue(stupTeamDataHelper.calledTeamAt)
         }catch{
             XCTAssertTrue(false)
@@ -112,4 +112,3 @@ extension TeamBridgeTests{
         }
     }
 }
-

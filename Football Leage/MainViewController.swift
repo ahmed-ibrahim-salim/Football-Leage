@@ -15,6 +15,4 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
 }
-

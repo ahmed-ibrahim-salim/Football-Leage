@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TeamData:Equatable{
+struct TeamData: Equatable{
     var teamId: Int64?
     var nickName: String
     var city: String?
@@ -31,6 +31,6 @@ struct TeamData:Equatable{
 
 enum Positions: String {
     case defender = "Defender"
-    case AttackingMidfielder = "Attacking Midfielder"
+    case attackingMidfielder = "Attacking Midfielder"
     case goalKeeper = "Goal Keeper"
 }
