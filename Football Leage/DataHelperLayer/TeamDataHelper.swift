@@ -12,6 +12,12 @@ class TeamDataHelper: DataHelper{
     var teams = [T]()
     var numOfTeams: Int { return teams.count }
     
+    func teamAtIndex(at index: Int) throws -> TeamData{
+        if teams.count < 1{
+            throw DataAccessError.searchError
+        }
+        return teams[index]
+    }
     func team(team: TeamData) throws -> T{
         if teams.contains(team){
             return team

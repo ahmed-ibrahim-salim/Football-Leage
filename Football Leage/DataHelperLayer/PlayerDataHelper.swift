@@ -7,13 +7,19 @@
 
 import Foundation
 
-
 class PlayerDataHelper: DataHelper{
     typealias T = PlayerData
     
     var players = [T]()
     var numOfPlayers: Int { return players.count }
     
+    func playerAtIndex(at index: Int) throws -> PlayerData{
+        if players.count < 1{
+            throw DataAccessError.searchError
+        }
+        return players[index]
+    }
+
     func player(player: T) throws -> T{
         if players.contains(player){
             return player

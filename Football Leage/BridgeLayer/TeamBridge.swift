@@ -21,7 +21,12 @@ struct TeamBridge{
     func toTeam(teamData: TeamData) -> Team{
         return Team(teamId: teamData.teamId, nickName: teamData.nickName, city: teamData.city)
     }
-    
+    func retrieveByIndex(at index: Int) throws -> Team{
+        
+        let teamData = try teamDataHelper.teamAtIndex(at: index)
+        return self.toTeam(teamData: teamData)
+        
+    }
     func save(team: inout Team) throws {
         var teamData = self.toTeamData(team: team)
         

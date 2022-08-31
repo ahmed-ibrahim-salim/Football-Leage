@@ -9,6 +9,7 @@ import Foundation
 
 struct PlayerBridge{
     var playerDataHelper: PlayerDataHelper!
+    var playersCount: Int { return retrieveAll() }
     
     init(playerDataHelper: PlayerDataHelper) {
         self.playerDataHelper = playerDataHelper
@@ -35,5 +36,15 @@ struct PlayerBridge{
         let playerData = self.toPlayerData(player: player)
         let retrievedPlayer = try self.playerDataHelper.player(player: playerData)
         return self.toPlayer(playerData: retrievedPlayer)
+    }
+    func retrieveByIndex(at index: Int) throws -> Player{
+        let playerData = try self.playerDataHelper.playerAtIndex(at: index)
+        return self.toPlayer(playerData: playerData)
+    }
+    func retrieveAll() -> Int{
+        if let players = playerDataHelper.findAll(){
+            return players.count
+        }
+        return 0
     }
 }

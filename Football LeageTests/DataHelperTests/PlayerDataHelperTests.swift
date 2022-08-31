@@ -24,6 +24,18 @@ class PlayerDataHelperTests: XCTestCase {
         XCTAssertThrowsError(try sut.player(player: player1))
         
     }
+    func test_TeamAtIndex_NotFound_throwsError(){
+        
+        XCTAssertThrowsError(try sut.playerAtIndex(at: 0))
+    }
+    func test_PlayerAtIndex_ReturnsTeam() throws{
+        let player1 = PlayerData(firstName: "Luca", lastName: "Mod")
+  
+            _ = try sut.insert(item: player1)
+            let returnedplayer = try sut.playerAtIndex(at: 0)
+            
+            XCTAssertEqual(returnedplayer, player1)
+    }
     func test_GetPlayer_ReturnsPlayer(){
         let player1 = PlayerData(playerId: 1, firstName: "micheal", lastName: "jorden")
         do{

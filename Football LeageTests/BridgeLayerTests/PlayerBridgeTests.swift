@@ -34,63 +34,70 @@ class PlayerBridgeTests: XCTestCase {
         
         XCTAssertEqual(playerData.firstName, player.firstName)
     }
-    func test_Save_InsertSimilarPlayers_ThrowsError(){
+    func test_Save_InsertSimilarPlayers_ThrowsError()throws{
         var player1 = Player(firstName: "Toni", lastName: "Kroos")
         var player2 = Player(firstName: "Toni", lastName: "Kroos")
         
-        do{
              _ = try sut.save(player: &player1)
-        }catch{
-            XCTAssertTrue(false)
-        }
         
         XCTAssertThrowsError(try sut.save(player: &player2))
     }
-    func test_Save_CallsInsertAt(){
+    func test_Save_CallsInsertAt()throws{
         var player1 = Player(firstName: "Toni", lastName: "Kroos")
-        do{
              _ = try sut.save(player: &player1)
             XCTAssertTrue(stubPlayerDataHelper.calledInsert)
-        } catch{
-            XCTAssertTrue(false)
-        }
+
     }
     func test_Delete_DeleteNonExistedPlayer_ThrowsError(){
         let player = Player(firstName: "loka", lastName: "Modrich")
         
         XCTAssertThrowsError(try sut.delete(player: player))
     }
-    func test_Delete_DeletesPlayer(){
+    func test_Delete_DeletesPlayer() throws {
         var player1 = Player(firstName: "Loca", lastName: "Modrich")
         var player2 = Player(firstName: "ronaldinho", lastName: "Ronaldo")
         
-        do{
              _ = try sut.save(player: &player1)
              _ = try sut.save(player: &player2)
 
             try sut.delete(player: player2)
             XCTAssertTrue(stubPlayerDataHelper.calledDelete)
-            
-        } catch{
-            XCTAssertTrue(false)
-        }
+
     }
     func test_Retrieve_RetrieveNonExistedPlayer_ThrowsError(){
         let player = Player(firstName: "Luca", lastName: "Modrich")
         
         XCTAssertThrowsError(try sut.retrieve(player: player))
     }
-    func test_Retrive_RetrievesPlayer(){
+    func test_Retrive_RetrievesPlayer() throws{
         var player = Player(firstName: "Luca", lastName: "Modrich")
 
-        do{
             try sut.save(player: &player)
              _ = try sut.retrieve(player: player)
             
             XCTAssertTrue(stubPlayerDataHelper.calledPlayer)
-        } catch{
-            XCTAssertTrue(false)
-        }
+
+    }
+    func test_countOfPlayers_returnsPlayersCount() throws {
+        var player1 = Player(firstName: "Luca", lastName: "Modrich")
+        var player2 = Player(firstName: "Lu", lastName: "Mod")
+        
+            _ = try sut.save(player: &player1)
+            _ = try sut.save(player: &player2)
+            XCTAssertEqual(sut.playersCount, 2)
+    }
+    func test_RetrievePlayerByIndex_ThrowsError(){
+        
+        XCTAssertThrowsError(try sut.retrieveByIndex(at: 0))
+    }
+    func test_RetrieveByIndex_ReturnsPlayer()throws{
+        var player1 = Player(firstName: "first", lastName: "last")
+        _ = try sut.save(player: &player1)
+        
+        _ = try sut.retrieveByIndex(at: 0)
+        
+        XCTAssertTrue(stubPlayerDataHelper.calledPlayerAtIndex)
+        
     }
 }
 
@@ -100,6 +107,7 @@ extension PlayerBridgeTests{
         var calledInsert: Bool = false
         var calledDelete: Bool = false
         var calledPlayer: Bool = false
+        var calledPlayerAtIndex: Bool = false
         
         override func insert(item: PlayerDataHelper.T) throws -> Int {
             calledInsert = true
@@ -112,6 +120,10 @@ extension PlayerBridgeTests{
         override func player(player: PlayerDataHelper.T) throws -> PlayerDataHelper.T {
             self.calledPlayer = true
             return try super.player(player: player)
+        }
+        override func playerAtIndex(at index: Int) throws -> PlayerData {
+            calledPlayerAtIndex = true
+            return try super.playerAtIndex(at: index)
         }
     }
     
