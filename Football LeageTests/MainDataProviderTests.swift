@@ -141,7 +141,7 @@ class MainDataProviderTests: XCTestCase {
                                             IndexPath(row: 0, section: 1))
         XCTAssertEqual("Delete Player", playerTitle)
     }
-    func test_deletingTeam_DeletesTeam() throws{
+    func test_deletingTeamInSection1_DeletesTeam() throws{
         var team1 = Team(nickName: "abc")
         var team2 = Team(nickName: "abcddd")
         _ = try sut.teamBridge?.save(team: &team1)
@@ -153,6 +153,19 @@ class MainDataProviderTests: XCTestCase {
         
         XCTAssertEqual(sut.teamBridge?.teamsCount, 1)
     }
+    func test_deletingPlayerInSection2_DeletesPlayer() throws{
+        var player1 = Player(firstName: "name", lastName: "last")
+        var player2 = Player(firstName: "name1", lastName: "last1")
+        _ = try sut.playerBridge?.save(player: &player1)
+        _ = try sut.playerBridge?.save(player: &player2)
+        
+        mockTableView.reloadData()
+        mockTableView.dataSource?.tableView?(mockTableView, commit: .delete, forRowAt: IndexPath(row: 0, section: 1))
+        
+        XCTAssertEqual(sut.playerBridge?.playersCount, 1)
+
+    }
+
 }
 
 extension MainDataProviderTests{
