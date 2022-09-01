@@ -56,4 +56,29 @@ class MainDataProvider: NSObject, UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        
+        guard let section = Section(rawValue: indexPath.section)else{fatalError()}
+        switch section {
+        case .teams:
+            return "Delete Team"
+        case .players:
+            return "Delete Player"
+        }
+    }
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        do{
+            guard let teamBridge = teamBridge else {fatalError()}
+
+            let team = try teamBridge.retrieveByIndex(at: indexPath.row)
+            if editingStyle == .delete{
+                try teamBridge.delete(team: team)
+            }
+        }catch{
+            
+        }
+        
+    }
 }
