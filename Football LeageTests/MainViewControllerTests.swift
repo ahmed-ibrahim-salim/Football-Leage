@@ -66,5 +66,34 @@ class MainViewControllerTests: XCTestCase {
         sut.addPlayerBtn.setTitle("Add Player", for: .normal)
         XCTAssertEqual(sut.addPlayerBtn.title(for: .normal), "Add Player")
     }
+    func test_AddTeamBtnAction_AddsTeam(){
+        let addTeamBtn = sut.addTeamBtn
+        sut.addTeam(sender: addTeamBtn!)
+        let mainDataProvider = MainDataProvider()
+        
+    }
     
+}
+
+extension MainViewControllerTests{
+//    class MockMainDataProvider: MainViewController{
+//        var calledTeamSaveTeam = false
+//
+//        func save
+//    }
+    
+//    class FakeMainDataProvider: MainDataProvider{
+//
+//        func configMockMainDataProvider() -> FakeMainDataProvider{
+//            let teamDataHelper = TeamDataHelper()
+//            let playerDataHelper = PlayerDataHelper()
+//            let team_Bridge = TeamBridge(teamDataHelper: teamDataHelper)
+//            let player_Bridge = PlayerBridge(playerDataHelper: playerDataHelper)
+//            let fakeDataProvider = FakeMainDataProvider()
+//            fakeDataProvider.teamBridge = team_Bridge
+//            fakeDataProvider.playerBridge = player_Bridge
+//
+//            return fakeDataProvider
+//        }
+//    }
 }

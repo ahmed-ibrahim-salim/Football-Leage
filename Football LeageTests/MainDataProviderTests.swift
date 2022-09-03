@@ -63,8 +63,9 @@ class MainDataProviderTests: XCTestCase {
     }
     func test_CellForRow_ReturnsDataRowCell()throws{
         var player = Player(firstName: "loca", lastName: "mod")
-        mockTableView.register(DataRowCell.self, forCellReuseIdentifier: "DataRowCell")
-        
+        mockTableView.register(MockDataRowCell.self, forCellReuseIdentifier: "DataRowCell")
+//        (UINib(nibName: "DataRowCell", bundle: nil), forCellReuseIdentifier: "DataRowCell")
+//
         _ = try sut.playerBridge?.save(player: &player)
         mockTableView.reloadData()
         
@@ -73,7 +74,8 @@ class MainDataProviderTests: XCTestCase {
     }
     func test_DequeueResuableCell_GotDequeued()throws{
         var player = Player(firstName: "loca", lastName: "mod")
-        mockTableView.register(DataRowCell.self, forCellReuseIdentifier: "DataRowCell")
+        mockTableView.register(MockDataRowCell.self, forCellReuseIdentifier: "DataRowCell")
+//        mockTableView.register(UINib(nibName: "DataRowCell", bundle: nil), forCellReuseIdentifier: "DataRowCell")
         _ = try sut.playerBridge?.save(player: &player)
         mockTableView.reloadData()
         
@@ -84,6 +86,7 @@ class MainDataProviderTests: XCTestCase {
     func test_CellForRow_CallsConfigCellFoPlayers() throws {
         var player = Player(firstName: "abo", lastName: "Treka")
         mockTableView.register(MockDataRowCell.self, forCellReuseIdentifier: "DataRowCell")
+//        mockTableView.register(UINib(nibName: "MockDataRowCell", bundle: nil), forCellReuseIdentifier: "DataRowCell")
         
         _ = try sut.playerBridge?.save(player: &player)
         mockTableView.reloadData()
@@ -95,7 +98,8 @@ class MainDataProviderTests: XCTestCase {
     func test_CellForRow_Section1_CallsConfigCellForTeams() throws {
         
         mockTableView.register(MockDataRowCell.self, forCellReuseIdentifier: "DataRowCell")
-        
+//        mockTableView.register(UINib(nibName: "MockDataRowCell", bundle: nil), forCellReuseIdentifier: "DataRowCell")
+//
         var team = Team(nickName: "abc")
         _ = try sut.teamBridge?.save(team: &team)
         mockTableView.reloadData()
@@ -181,8 +185,9 @@ extension MainDataProviderTests{
                 style: .plain)
             
             mockTableView.dataSource = datasource
-            mockTableView.register(MockDataRowCell.self,
-                                   forCellReuseIdentifier: "DataRowCell")
+            mockTableView.register(MockDataRowCell.self, forCellReuseIdentifier: "DataRowCell")
+//            (UINib(nibName: "MockDataRowCell", bundle: nil),
+//                                   forCellReuseIdentifier: "DataRowCell")
             return mockTableView
         }
         

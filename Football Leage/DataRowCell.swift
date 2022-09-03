@@ -8,12 +8,11 @@
 import UIKit
 
 class DataRowCell: UITableViewCell {
+    
+    @IBOutlet var titleLbl: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configCell(title: String) {
+        titleLbl.text = title
     }
-
-    func configCell(title: String) {}
     
 }

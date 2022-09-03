@@ -37,6 +37,7 @@
 		EFA5F9AA28BD0BF80099162E /* DataRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5F9A828BD0BF80099162E /* DataRowCell.swift */; };
 		EFA5F9AB28BD0BF80099162E /* DataRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA5F9A928BD0BF80099162E /* DataRowCell.xib */; };
 		EFA5F9AF28BD18050099162E /* MainDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5F9AE28BD18050099162E /* MainDataProviderTests.swift */; };
+		EFF2095828C35A62005A800E /* DataRowCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2095728C35A62005A800E /* DataRowCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		EFA5F9A828BD0BF80099162E /* DataRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRowCell.swift; sourceTree = "<group>"; };
 		EFA5F9A928BD0BF80099162E /* DataRowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataRowCell.xib; sourceTree = "<group>"; };
 		EFA5F9AE28BD18050099162E /* MainDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataProviderTests.swift; sourceTree = "<group>"; };
+		EFF2095728C35A62005A800E /* DataRowCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRowCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 		EF7EEF5028B8F0B500EBA4D8 /* Football LeageTests */ = {
 			isa = PBXGroup;
 			children = (
+				EFF2095728C35A62005A800E /* DataRowCellTests.swift */,
 				EFA5F9AE28BD18050099162E /* MainDataProviderTests.swift */,
 				EFA5F9A228BCCBCD0099162E /* MainViewControllerTests.swift */,
 				EF3959F528BA3290002BCE24 /* BridgeLayerTests */,
@@ -436,6 +439,7 @@
 				EF3959E728BA16EB002BCE24 /* PlayerDataHelperTests.swift in Sources */,
 				EF3959F728BA32A7002BCE24 /* TeamBridgeTests.swift in Sources */,
 				EF3959F128BA3218002BCE24 /* TeamTests.swift in Sources */,
+				EFF2095828C35A62005A800E /* DataRowCellTests.swift in Sources */,
 				EF5988F328B90C9500BD0470 /* TeamDataHelperTests.swift in Sources */,
 				EF5926B228BBB4C6001B65F1 /* PlayerBridgeTests.swift in Sources */,
 				EFA5F9A328BCCBCD0099162E /* MainViewControllerTests.swift in Sources */,
