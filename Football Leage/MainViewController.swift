@@ -16,11 +16,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         mainTableView.dataSource = dataProvider
         mainTableView.delegate = dataProvider
-    }
-    @IBAction func addTeam(sender: UIButton){
-        
     }
 }

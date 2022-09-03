@@ -168,6 +168,18 @@ class MainDataProviderTests: XCTestCase {
         
         XCTAssertEqual(sut.playerBridge?.playersCount, 1)
     }
+    func test_AddNewTeam_AddsTeam() throws {
+        var team1 = Team(nickName: "abc")
+        mockTableView.register(MockDataRowCell.self, forCellReuseIdentifier: "DataRowCell")
+        try sut.addNewTeam(team: &team1)
+        mockTableView.reloadData()
+        
+        let cell = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! MockDataRowCell
+        
+        
+        XCTAssertEqual(cell.catchedTitle, "abc")
+
+    }
 }
 
 extension MainDataProviderTests{

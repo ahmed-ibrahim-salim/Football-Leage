@@ -10,25 +10,22 @@ import XCTest
 
 class MainViewControllerTests: XCTestCase {
     var sut: MainViewController!
-//    var mainDataProvider: MainDataProvider!
+    var tableView: UITableView!
+    var mainDataProvider: MainDataProvider!
     
     override func setUpWithError() throws {
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         sut = storyboard.instantiateViewController(identifier: "MainViewController") as? MainViewController
-        
-//        let teamDataHelper = TeamDataHelper()
-//        let playerDataHelper = PlayerDataHelper()
-//        let team_Bridge = TeamBridge(teamDataHelper: teamDataHelper)
-//        let player_Bridge = PlayerBridge(playerDataHelper: playerDataHelper)
-//        mainDataProvider = MainDataProvider()
-//        mainDataProvider.playerBridge = player_Bridge
-//        mainDataProvider.teamBridge = team_Bridge
-//        sut.dataProvider = mainDataProvider
-        
         sut.loadViewIfNeeded()
-        
+
+        tableView = sut.mainTableView
+
+        mainDataProvider = MainDataProvider()
+        tableView.dataSource = mainDataProvider
+        tableView.delegate = mainDataProvider
+
     }
 
     override func tearDownWithError() throws {}
@@ -66,34 +63,5 @@ class MainViewControllerTests: XCTestCase {
         sut.addPlayerBtn.setTitle("Add Player", for: .normal)
         XCTAssertEqual(sut.addPlayerBtn.title(for: .normal), "Add Player")
     }
-    func test_AddTeamBtnAction_AddsTeam(){
-        let addTeamBtn = sut.addTeamBtn
-        sut.addTeam(sender: addTeamBtn!)
-        let mainDataProvider = MainDataProvider()
-        
-    }
-    
-}
 
-extension MainViewControllerTests{
-//    class MockMainDataProvider: MainViewController{
-//        var calledTeamSaveTeam = false
-//
-//        func save
-//    }
-    
-//    class FakeMainDataProvider: MainDataProvider{
-//
-//        func configMockMainDataProvider() -> FakeMainDataProvider{
-//            let teamDataHelper = TeamDataHelper()
-//            let playerDataHelper = PlayerDataHelper()
-//            let team_Bridge = TeamBridge(teamDataHelper: teamDataHelper)
-//            let player_Bridge = PlayerBridge(playerDataHelper: playerDataHelper)
-//            let fakeDataProvider = FakeMainDataProvider()
-//            fakeDataProvider.teamBridge = team_Bridge
-//            fakeDataProvider.playerBridge = player_Bridge
-//
-//            return fakeDataProvider
-//        }
-//    }
 }

@@ -16,6 +16,11 @@ class MainDataProvider: NSObject, UITableViewDelegate, UITableViewDataSource{
     var teamBridge: TeamBridge?
     var playerBridge: PlayerBridge?
     
+    func addNewTeam(team: inout Team) throws{
+        let teamDataHelper = TeamDataHelper()
+        teamBridge = TeamBridge(teamDataHelper: teamDataHelper)
+        try teamBridge?.save(team: &team)
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }

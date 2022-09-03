@@ -24,6 +24,7 @@
 		EF5988F828B9141D00BD0470 /* TeamDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988F728B9141D00BD0470 /* TeamDataTests.swift */; };
 		EF5988FB28B915A100BD0470 /* PlayerDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988FA28B915A100BD0470 /* PlayerDataTests.swift */; };
 		EF5988FE28B92F6800BD0470 /* PlayerDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5988FD28B92F6800BD0470 /* PlayerDataHelper.swift */; };
+		EF61796028C3C83E003184FD /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61795F28C3C83E003184FD /* MainViewControllerTests.swift */; };
 		EF7EEF3B28B8F0B400EBA4D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF3A28B8F0B400EBA4D8 /* AppDelegate.swift */; };
 		EF7EEF3D28B8F0B400EBA4D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF3C28B8F0B400EBA4D8 /* SceneDelegate.swift */; };
 		EF7EEF3F28B8F0B400EBA4D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF3E28B8F0B400EBA4D8 /* MainViewController.swift */; };
@@ -32,7 +33,6 @@
 		EF7EEF4728B8F0B500EBA4D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7EEF4528B8F0B500EBA4D8 /* LaunchScreen.storyboard */; };
 		EF7EEF5C28B8F0B500EBA4D8 /* Football_LeageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF5B28B8F0B500EBA4D8 /* Football_LeageUITests.swift */; };
 		EF7EEF5E28B8F0B500EBA4D8 /* Football_LeageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EEF5D28B8F0B500EBA4D8 /* Football_LeageUITestsLaunchTests.swift */; };
-		EFA5F9A328BCCBCD0099162E /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5F9A228BCCBCD0099162E /* MainViewControllerTests.swift */; };
 		EFA5F9A728BD039D0099162E /* MainDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5F9A628BD039D0099162E /* MainDataProvider.swift */; };
 		EFA5F9AA28BD0BF80099162E /* DataRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5F9A828BD0BF80099162E /* DataRowCell.swift */; };
 		EFA5F9AB28BD0BF80099162E /* DataRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA5F9A928BD0BF80099162E /* DataRowCell.xib */; };
@@ -75,6 +75,7 @@
 		EF5988F728B9141D00BD0470 /* TeamDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataTests.swift; sourceTree = "<group>"; };
 		EF5988FA28B915A100BD0470 /* PlayerDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataTests.swift; sourceTree = "<group>"; };
 		EF5988FD28B92F6800BD0470 /* PlayerDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataHelper.swift; sourceTree = "<group>"; };
+		EF61795F28C3C83E003184FD /* MainViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		EF7EEF3728B8F0B400EBA4D8 /* Football Leage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Football Leage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7EEF3A28B8F0B400EBA4D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF7EEF3C28B8F0B400EBA4D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		EF7EEF5728B8F0B500EBA4D8 /* Football LeageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Football LeageUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7EEF5B28B8F0B500EBA4D8 /* Football_LeageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football_LeageUITests.swift; sourceTree = "<group>"; };
 		EF7EEF5D28B8F0B500EBA4D8 /* Football_LeageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football_LeageUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EFA5F9A228BCCBCD0099162E /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		EFA5F9A628BD039D0099162E /* MainDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataProvider.swift; sourceTree = "<group>"; };
 		EFA5F9A828BD0BF80099162E /* DataRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRowCell.swift; sourceTree = "<group>"; };
 		EFA5F9A928BD0BF80099162E /* DataRowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataRowCell.xib; sourceTree = "<group>"; };
@@ -237,9 +237,9 @@
 		EF7EEF5028B8F0B500EBA4D8 /* Football LeageTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF61795F28C3C83E003184FD /* MainViewControllerTests.swift */,
 				EFF2095728C35A62005A800E /* DataRowCellTests.swift */,
 				EFA5F9AE28BD18050099162E /* MainDataProviderTests.swift */,
-				EFA5F9A228BCCBCD0099162E /* MainViewControllerTests.swift */,
 				EF3959F528BA3290002BCE24 /* BridgeLayerTests */,
 				EF3959EB28BA2DEE002BCE24 /* ApplicationLayerTests */,
 				EF5988FC28B91AE300BD0470 /* DataHelperTests */,
@@ -442,7 +442,7 @@
 				EFF2095828C35A62005A800E /* DataRowCellTests.swift in Sources */,
 				EF5988F328B90C9500BD0470 /* TeamDataHelperTests.swift in Sources */,
 				EF5926B228BBB4C6001B65F1 /* PlayerBridgeTests.swift in Sources */,
-				EFA5F9A328BCCBCD0099162E /* MainViewControllerTests.swift in Sources */,
+				EF61796028C3C83E003184FD /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
