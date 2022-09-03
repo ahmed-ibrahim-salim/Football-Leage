@@ -99,19 +99,19 @@ class MainDataProviderTests: XCTestCase {
         var team = Team(nickName: "abc")
         _ = try sut.teamBridge?.save(team: &team)
         mockTableView.reloadData()
-
+        
         let teamCell = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
         as! MockDataRowCell
         XCTAssertEqual(team.nickName, teamCell.catchedTitle)
         
     }
     func test_CellForRow_Section2_CallsConfigCellForPlayers() throws {
-
+        
         let mockTableView = MockTableView.mockTableView(withDataSource: sut)
-                                                        
+        
         var player = Player(firstName: "name", lastName: "last")
         var team = Team(nickName: "abc")
-
+        
         _ = try sut.teamBridge?.save(team: &team)
         _ = try sut.playerBridge?.save(player: &player)
         mockTableView.reloadData()
@@ -122,7 +122,7 @@ class MainDataProviderTests: XCTestCase {
         as! MockDataRowCell
         
         XCTAssertEqual(team.nickName, teamCell.catchedTitle)
-
+        
         XCTAssertEqual("\(player.firstName) \(player.lastName)", playerCell.catchedTitle)
     }
     func test_DeleteButton_Section1_ShowsTitleDeleteTeam() throws {
@@ -131,14 +131,14 @@ class MainDataProviderTests: XCTestCase {
         _ = try sut.teamBridge?.save(team: &team)
         mockTableView.reloadData()
         let teamTitle = mockTableView.delegate?.tableView?(mockTableView, titleForDeleteConfirmationButtonForRowAt:
-                IndexPath(row: 0, section: 0))
+                                                            IndexPath(row: 0, section: 0))
         XCTAssertEqual("Delete Team", teamTitle)
     }
     func test_DeleteButton_Section2_ShowsTitleDeletePlayer() throws {
         var player = Player(firstName: "name", lastName: "last")
         _ = try sut.playerBridge?.save(player: &player)
         let playerTitle = mockTableView.delegate?.tableView?(mockTableView, titleForDeleteConfirmationButtonForRowAt:
-                                            IndexPath(row: 0, section: 1))
+                                                                IndexPath(row: 0, section: 1))
         XCTAssertEqual("Delete Player", playerTitle)
     }
     func test_deletingTeamInSection1_DeletesTeam() throws{
@@ -146,7 +146,7 @@ class MainDataProviderTests: XCTestCase {
         var team2 = Team(nickName: "abcddd")
         _ = try sut.teamBridge?.save(team: &team1)
         _ = try sut.teamBridge?.save(team: &team2)
-
+        
         mockTableView.reloadData()
         mockTableView.dataSource?.tableView?(mockTableView, commit: .delete, forRowAt: IndexPath(row: 0, section: 0))
         mockTableView.reloadData()
@@ -159,13 +159,11 @@ class MainDataProviderTests: XCTestCase {
         _ = try sut.playerBridge?.save(player: &player1)
         _ = try sut.playerBridge?.save(player: &player2)
         
-        mockTableView.reloadData()
         mockTableView.dataSource?.tableView?(mockTableView, commit: .delete, forRowAt: IndexPath(row: 0, section: 1))
+        mockTableView.reloadData()
         
         XCTAssertEqual(sut.playerBridge?.playersCount, 1)
-
     }
-
 }
 
 extension MainDataProviderTests{
@@ -174,17 +172,17 @@ extension MainDataProviderTests{
         var cellDequeued = false
         
         class func mockTableView(withDataSource datasource: UITableViewDataSource) -> MockTableView{
-    //        The reason for this crash is that UIKit optimizes the second
-    //        section because the table view has a frame of CGRect.zero. As a
-    //        result, cellForRow(at:) returns nil, and the as! forced unwrapping
-    //        lets the runtime crash.
+            //        The reason for this crash is that UIKit optimizes the second
+            //        section because the table view has a frame of CGRect.zero. As a
+            //        result, cellForRow(at:) returns nil, and the as! forced unwrapping
+            //        lets the runtime crash.
             let mockTableView = MockTableView(
-                   frame: CGRect(x: 0, y: 0, width: 320, height: 480),
-                   style: .plain)
+                frame: CGRect(x: 0, y: 0, width: 320, height: 480),
+                style: .plain)
             
             mockTableView.dataSource = datasource
             mockTableView.register(MockDataRowCell.self,
-                                        forCellReuseIdentifier: "DataRowCell")
+                                   forCellReuseIdentifier: "DataRowCell")
             return mockTableView
         }
         

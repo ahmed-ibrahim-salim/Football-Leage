@@ -10,12 +10,22 @@ import XCTest
 
 class MainViewControllerTests: XCTestCase {
     var sut: MainViewController!
+//    var mainDataProvider: MainDataProvider!
     
     override func setUpWithError() throws {
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         sut = storyboard.instantiateViewController(identifier: "MainViewController") as? MainViewController
+        
+//        let teamDataHelper = TeamDataHelper()
+//        let playerDataHelper = PlayerDataHelper()
+//        let team_Bridge = TeamBridge(teamDataHelper: teamDataHelper)
+//        let player_Bridge = PlayerBridge(playerDataHelper: playerDataHelper)
+//        mainDataProvider = MainDataProvider()
+//        mainDataProvider.playerBridge = player_Bridge
+//        mainDataProvider.teamBridge = team_Bridge
+//        sut.dataProvider = mainDataProvider
         
         sut.loadViewIfNeeded()
         
@@ -39,4 +49,22 @@ class MainViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.mainTableView.dataSource as? MainDataProvider,
                        sut.mainTableView.delegate as? MainDataProvider)
     }
+    func test_AddTeamBtn_NotNil(){
+        XCTAssertNotNil(sut.addTeamBtn.isDescendant(of: sut.view))
+    }
+    func test_AddTeamBtnTitle_IsAddTeam(){
+        sut.addTeamBtn.setTitle("Add Team", for: .normal)
+        XCTAssertEqual(sut.addTeamBtn.title(for: .normal), "Add Team")
+    }
+    func test_AddTeamBtn_AddsTeamToTableView(){
+        
+    }
+    func test_AddPlayerBtn_NotNil(){
+        XCTAssertNotNil(sut.addPlayerBtn.isDescendant(of: sut.view))
+    }
+    func test_AddplayerBtnTitle_IsAddPlayer(){
+        sut.addPlayerBtn.setTitle("Add Player", for: .normal)
+        XCTAssertEqual(sut.addPlayerBtn.title(for: .normal), "Add Player")
+    }
+    
 }

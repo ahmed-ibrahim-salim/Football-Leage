@@ -68,13 +68,25 @@ class MainDataProvider: NSObject, UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView,
                    commit editingStyle: UITableViewCell.EditingStyle,
                    forRowAt indexPath: IndexPath) {
+        
         do{
             guard let teamBridge = teamBridge else {fatalError()}
-
-            let team = try teamBridge.retrieveByIndex(at: indexPath.row)
-            if editingStyle == .delete{
-                try teamBridge.delete(team: team)
+            guard let playerBridge = playerBridge else {fatalError()}
+            guard let section = Section(rawValue: indexPath.section)else{fatalError()}
+            
+            switch section {
+            case .teams:
+                let team = try teamBridge.retrieveByIndex(at: indexPath.row)
+                if editingStyle == .delete{
+                    try teamBridge.delete(team: team)
+                }
+            case .players:
+                let player = try playerBridge.retrieveByIndex(at: indexPath.row)
+                if editingStyle == .delete{
+                    try playerBridge.delete(player: player)
+                }
             }
+            
         }catch{
             
         }

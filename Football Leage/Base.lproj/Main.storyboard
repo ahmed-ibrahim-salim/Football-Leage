@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,20 +17,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-bL-q5R">
-                                <rect key="frame" x="5" y="44" width="404" height="818"/>
+                                <rect key="frame" x="5" y="85" width="404" height="777"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXn-so-Ut3">
+                                <rect key="frame" x="20" y="49" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHD-VD-EmO">
+                                <rect key="frame" x="327" y="49" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gEq-bL-q5R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Ng-eA-ceE"/>
+                            <constraint firstItem="hXn-so-Ut3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="0Uw-fr-wUh"/>
                             <constraint firstItem="gEq-bL-q5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="PEl-uy-WAb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gEq-bL-q5R" secondAttribute="trailing" constant="5" id="cYD-mD-q8A"/>
+                            <constraint firstItem="hXn-so-Ut3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eKZ-rc-055"/>
+                            <constraint firstItem="gEq-bL-q5R" firstAttribute="top" secondItem="fHD-VD-EmO" secondAttribute="bottom" constant="5" id="kzV-bI-RVv"/>
+                            <constraint firstItem="fHD-VD-EmO" firstAttribute="top" secondItem="hXn-so-Ut3" secondAttribute="top" id="lx4-nm-KIG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fHD-VD-EmO" secondAttribute="trailing" constant="20" id="sSb-nO-s4o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gEq-bL-q5R" secondAttribute="bottom" id="vPj-J4-G4c"/>
+                            <constraint firstItem="gEq-bL-q5R" firstAttribute="top" secondItem="hXn-so-Ut3" secondAttribute="bottom" constant="5" id="ywn-MO-RkD"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addPlayerBtn" destination="fHD-VD-EmO" id="PfL-ws-r91"/>
+                        <outlet property="addTeamBtn" destination="hXn-so-Ut3" id="dKH-EM-Zex"/>
                         <outlet property="dataProvider" destination="hyE-Y9-vAN" id="Zjl-bR-z7S"/>
                         <outlet property="mainTableView" destination="gEq-bL-q5R" id="op8-Re-bJ6"/>
                     </connections>
@@ -38,7 +55,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="hyE-Y9-vAN" customClass="MainDataProvider" customModule="Football_Leage" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-16" y="83"/>
+            <point key="canvasLocation" x="-17.39130434782609" y="82.366071428571431"/>
         </scene>
     </scenes>
     <resources>
