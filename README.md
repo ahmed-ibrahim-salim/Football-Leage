@@ -13,7 +13,10 @@ It is an example for seperating layers for the purpose of reaching a maintainabl
   - write the minimal code to make the test compiles, you get a failing test (Red)
   - write the code to make the test pass (green)
   - refactor code to make it better (Refactor)
-  Red -> Green -> Refactor, these are the steps of TDD.
+  - Red -> Green -> Refactor, these are the steps of TDD.
 
 2- Protocol-oriented programming, It is a way of structuring your code to make a codebase easy to maintain & extend:
   - start the design with a protocol to define the blueprints for the common methods.
+  - seperate the design into layers for achieving Single responsibility principle.
+  - makes use of value types like structures which is recommended by Apple Documentation.
+  - design patterns like bridge is useful for producing types between Layers (application layer - model layer).
