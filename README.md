@@ -20,3 +20,6 @@ It is an example for seperating layers for the purpose of reaching a maintainabl
   - seperate the design into layers for achieving Single responsibility principle.
   - makes use of value types like structures which is recommended by Apple Documentation.
   - design patterns like bridge is useful for producing types between Layers (application layer - model layer).
+
+# Tools:
+1- [SwiftLint](https://github.com/realm/SwiftLint): to enforce Swift style and conventions.
